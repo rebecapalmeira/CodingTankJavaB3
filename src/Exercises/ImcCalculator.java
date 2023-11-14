@@ -40,8 +40,9 @@ public class ImcCalculator {
     }
 
     public void printImcCategory() {
+        double calculatedImc =   this.calculateImc();
         System.out.printf(
-            "O valor do seu IMC é %.1f (considerado %s).", this.calculateImc(), identifyImcCategory(this.calculateImc())
+            "O valor do seu IMC é %.1f (considerado %s).", calculatedImc, identifyImcCategory(calculatedImc)
         );
     }
 
