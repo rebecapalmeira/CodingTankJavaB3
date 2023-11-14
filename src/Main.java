@@ -1,4 +1,5 @@
-import Exercises.CalculateIMC;
+import Exercises.ImcCalculator;
+import Exercises.TestScoreAverage;
 
 import java.util.Scanner;
 
@@ -8,8 +9,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // *********************************************************
         // calculating IMC
-        CalculateIMC imcCalculator = new CalculateIMC();
+        ImcCalculator imcCalculator = new ImcCalculator();
+
         imcCalculator.askForHeight();
         imcCalculator.setHeight(scanner.nextDouble());
 
@@ -17,5 +20,18 @@ public class Main {
         imcCalculator.setWeight(scanner.nextDouble());
 
         imcCalculator.printImcCategory();
+
+        // *********************************************************
+
+        System.out.println("\n*********************************************************\n");
+
+        // *********************************************************
+        // calculating Test Scores Average
+        TestScoreAverage testScoreAverage = new TestScoreAverage();
+        for(int counter = 1; counter <= 5; counter++) {
+            testScoreAverage.askForTestScore(counter);
+            testScoreAverage.addTestScore(scanner.nextInt());
+        }
+        testScoreAverage.printAverage();
     }
 }
