@@ -21,7 +21,7 @@ public class TestScoreAverage {
     5
     A média do aluno foi 7.5
      */
-    private ArrayList<Integer> testsScores = new ArrayList<Integer>();
+    private ArrayList<Float> testsScores = new ArrayList<>();
 
     public void askForNumberOfTests() {
         System.out.println("Quantas notas deseja registrar? ");
@@ -31,7 +31,7 @@ public class TestScoreAverage {
         Scanner scanner = new Scanner(System.in);
         for(int counter = 1; counter <= numberOfTests; counter ++) {
             this.askForTestScore(counter);
-            this.addTestScore(scanner.nextInt());
+            this.addTestScore(scanner.nextFloat());
         }
     }
 
@@ -39,17 +39,17 @@ public class TestScoreAverage {
         System.out.printf("Informe a nota da %dª prova: ", counter);
     }
 
-    private void addTestScore(int testScore) {
+    private void addTestScore(float testScore) {
         this.testsScores.add(testScore);
     }
 
     private float calculateAverage() {
-        int sum = 0;
-        for(int testScore : this.testsScores) {
+        float sum = 0;
+        for(float testScore : this.testsScores) {
             sum += testScore;
         };
 
-        return (float) sum / this.testsScores.size();
+        return sum / this.testsScores.size();
     }
 
     public void printAverage() {

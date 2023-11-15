@@ -1,3 +1,4 @@
+import Exercises.CelsiusToFahrenheit;
 import Exercises.DecreasingLinesOfSymbols;
 import Exercises.ImcCalculator;
 import Exercises.TestScoreAverage;
@@ -12,42 +13,52 @@ public class Main {
 
         // *********************************************************
         // calculating IMC
-        ImcCalculator imcCalculator = new ImcCalculator();
-
-        imcCalculator.askForHeight();
-        imcCalculator.setHeight(scanner.nextDouble());
-
-        imcCalculator.askForWeight();
-        imcCalculator.setWeight(scanner.nextDouble());
-
-        imcCalculator.printImcInformation();
+//        ImcCalculator imcCalculator = new ImcCalculator();
+//
+//        imcCalculator.askForHeight();
+//        imcCalculator.setHeight(scanner.nextDouble());
+//
+//        imcCalculator.askForWeight();
+//        imcCalculator.setWeight(scanner.nextDouble());
+//
+//        imcCalculator.printImcInformation();
 
         // *********************************************************
 
-        System.out.println("\n\n*********************************************************\n");
+//        System.out.println("\n\n*********************************************************\n");
 
         // *********************************************************
         // calculating Test Scores Average
 
-        TestScoreAverage testScoreAverage = new TestScoreAverage();
-        testScoreAverage.askForNumberOfTests();
-        testScoreAverage.registerTestScores(scanner.nextInt());
-        testScoreAverage.printAverage();
+//        TestScoreAverage testScoreAverage = new TestScoreAverage();
+//        testScoreAverage.askForNumberOfTests();
+//        testScoreAverage.registerTestScores(scanner.nextInt());
+//        testScoreAverage.printAverage();
 
         // *********************************************************
 
-        System.out.println("\n\n*********************************************************\n");
+//        System.out.println("\n\n*********************************************************\n");
 
         // *********************************************************
         // printing decreasing lines of symbols
 
-        DecreasingLinesOfSymbols linesOfSymbols = new DecreasingLinesOfSymbols();
-        linesOfSymbols.askForNumberOfLines();
-        int numberOfLines = scanner.nextInt();
+//        DecreasingLinesOfSymbols linesOfSymbols = new DecreasingLinesOfSymbols();
+//        linesOfSymbols.askForNumberOfLines();
+//        int numberOfLines = scanner.nextInt();
+//
+//        linesOfSymbols.askForSymbol();
+//        String symbol = scanner.next();
+//
+//        linesOfSymbols.printLineOfSymbols(numberOfLines, symbol);
 
-        linesOfSymbols.askForSymbol();
-        String symbol = scanner.next();
+        // *********************************************************
 
-        linesOfSymbols.printLineOfSymbols(numberOfLines, symbol);
+//        System.out.println("\n\n*********************************************************\n");
+
+        // *********************************************************
+        // converting temperatures from Celsius to Fahrenheit
+        CelsiusToFahrenheit celsiusToFahrenheit = new CelsiusToFahrenheit();
+        celsiusToFahrenheit.registerTemperatures();
+        celsiusToFahrenheit.printConvertedTemperatures();
     }
 }
