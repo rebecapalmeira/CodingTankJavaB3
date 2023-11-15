@@ -1,3 +1,4 @@
+import Exercises.DecreasingLinesOfSymbols;
 import Exercises.ImcCalculator;
 import Exercises.TestScoreAverage;
 
@@ -19,7 +20,7 @@ public class Main {
         imcCalculator.askForWeight();
         imcCalculator.setWeight(scanner.nextDouble());
 
-        imcCalculator.printImcCategory();
+        imcCalculator.printImcInformation();
 
         // *********************************************************
 
@@ -27,11 +28,28 @@ public class Main {
 
         // *********************************************************
         // calculating Test Scores Average
+
         TestScoreAverage testScoreAverage = new TestScoreAverage();
         for(int counter = 1; counter <= 5; counter++) {
             testScoreAverage.askForTestScore(counter);
             testScoreAverage.addTestScore(scanner.nextInt());
         }
         testScoreAverage.printAverage();
+
+        // *********************************************************
+
+        System.out.println("\n*********************************************************\n");
+
+        // *********************************************************
+        // printing decreasing lines of symbols
+
+        DecreasingLinesOfSymbols linesOfSymbols = new DecreasingLinesOfSymbols();
+        linesOfSymbols.askForNumberOfLines();
+        int numberOfLines = scanner.nextInt();
+
+        linesOfSymbols.askForSymbol();
+        String symbol = scanner.next();
+
+        linesOfSymbols.printLineOfSymbols(numberOfLines, symbol);
     }
 }

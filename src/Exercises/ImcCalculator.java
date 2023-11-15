@@ -39,18 +39,18 @@ public class ImcCalculator {
         System.out.println("Informe sua altura em metros: ");
     }
 
-    public void printImcCategory() {
+    public void printImcInformation() {
         double calculatedImc =   this.calculateImc();
         System.out.printf(
-            "O valor do seu IMC é %.1f (considerado %s).", calculatedImc, identifyImcCategory(calculatedImc)
+            "O valor do seu IMC é %.1f (considerado %s).", calculatedImc, imcCategory(calculatedImc)
         );
     }
 
-    private double calculateImc () {
+    private double calculateImc() {
         return this.weight / Math.pow(this.height, 2);
     }
 
-    private String identifyImcCategory(double imc) {
+    private String imcCategory(double imc) {
         /*
         Tabela de IMC
         Você pode utilizar a tabela abaixo para consultar o seu índice de massa corporal.
