@@ -1,7 +1,4 @@
-import Exercises.CelsiusToFahrenheit;
-import Exercises.DecreasingLinesOfSymbols;
-import Exercises.ImcCalculator;
-import Exercises.TestScoreAverage;
+import Exercises.*;
 
 import java.util.Scanner;
 
@@ -57,8 +54,26 @@ public class Main {
 
         // *********************************************************
         // converting temperatures from Celsius to Fahrenheit
-        CelsiusToFahrenheit celsiusToFahrenheit = new CelsiusToFahrenheit();
-        celsiusToFahrenheit.registerTemperatures();
-        celsiusToFahrenheit.printConvertedTemperatures();
+
+//        CelsiusToFahrenheit celsiusToFahrenheit = new CelsiusToFahrenheit();
+//        celsiusToFahrenheit.registerTemperatures();
+//        celsiusToFahrenheit.printConvertedTemperatures();
+
+        // *********************************************************
+        // Math operation
+
+        MathOperation mathOperation = new MathOperation();
+        mathOperation.askForOperation();
+        mathOperation.setOperation(scanner.nextLine());
+
+        if(mathOperation.getOperation() != null) {
+            mathOperation.askForNumber(1);
+            mathOperation.setNumberOne(scanner.nextDouble());
+
+            mathOperation.askForNumber(2);
+            mathOperation.setNumberTwo(scanner.nextDouble());
+
+            mathOperation.printResult();
+        }
     }
 }
