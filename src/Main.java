@@ -87,17 +87,30 @@ public class Main {
         // *********************************************************
         // Investment
 
-        Investment investment = new Investment();
+//        Investment investment = new Investment();
+//
+//        investment.askForInitialInvestment();
+//        investment.setInitialInvestment(scanner.nextDouble());
+//
+//        investment.askForInterestRate();
+//        investment.setInterestRate(scanner.nextDouble());
+//
+//        investment.askForMonthsInvesting();
+//        investment.setMonths(scanner.nextInt());
+//
+//        investment.printProfitForecast();
 
-        investment.askForInitialInvestment();
-        investment.setInitialInvestment(scanner.nextDouble());
+        // *********************************************************
 
-        investment.askForInterestRate();
-        investment.setInterestRate(scanner.nextDouble());
+//        System.out.println("\n\n*********************************************************\n");
 
-        investment.askForMonthsInvesting();
-        investment.setMonths(scanner.nextInt());
+        // *********************************************************
+        // Sum of N numbers
 
-        investment.printProfitForecast();
+        SumOfN sumOfN = new SumOfN();
+
+        sumOfN.askForN();
+        sumOfN.setN((scanner.nextInt()));
+        sumOfN.printSum();
     }
 }
