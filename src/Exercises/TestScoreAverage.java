@@ -1,6 +1,7 @@
 package Exercises;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TestScoreAverage {
     /*
@@ -22,11 +23,23 @@ public class TestScoreAverage {
      */
     private ArrayList<Integer> testsScores = new ArrayList<Integer>();
 
-    public void askForTestScore(int counter) {
-        System.out.printf("Informe a nota da prova %d: ", counter);
+    public void askForNumberOfTests() {
+        System.out.println("Quantas notas deseja registrar? ");
     }
 
-    public void addTestScore(int testScore) {
+    public void registerTestScores(int numberOfTests) {
+        Scanner scanner = new Scanner(System.in);
+        for(int counter = 1; counter <= numberOfTests; counter ++) {
+            this.askForTestScore(counter);
+            this.addTestScore(scanner.nextInt());
+        }
+    }
+
+    private void askForTestScore(int counter) {
+        System.out.printf("Informe a nota da %dª prova: ", counter);
+    }
+
+    private void addTestScore(int testScore) {
         this.testsScores.add(testScore);
     }
 
