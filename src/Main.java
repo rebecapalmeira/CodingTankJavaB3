@@ -24,21 +24,19 @@ public class Main {
 
         // *********************************************************
 
-        System.out.println("\n*********************************************************\n");
+        System.out.println("\n\n*********************************************************\n");
 
         // *********************************************************
         // calculating Test Scores Average
 
         TestScoreAverage testScoreAverage = new TestScoreAverage();
-        for(int counter = 1; counter <= 5; counter++) {
-            testScoreAverage.askForTestScore(counter);
-            testScoreAverage.addTestScore(scanner.nextInt());
-        }
+        testScoreAverage.askForNumberOfTests();
+        testScoreAverage.registerTestScores(scanner.nextInt());
         testScoreAverage.printAverage();
 
         // *********************************************************
 
-        System.out.println("\n*********************************************************\n");
+        System.out.println("\n\n*********************************************************\n");
 
         // *********************************************************
         // printing decreasing lines of symbols
