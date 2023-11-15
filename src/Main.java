@@ -60,20 +60,44 @@ public class Main {
 //        celsiusToFahrenheit.printConvertedTemperatures();
 
         // *********************************************************
+
+//        System.out.println("\n\n*********************************************************\n");
+
+        // *********************************************************
         // Math operation
 
-        MathOperation mathOperation = new MathOperation();
-        mathOperation.askForOperation();
-        mathOperation.setOperation(scanner.nextLine());
+//        MathOperation mathOperation = new MathOperation();
+//        mathOperation.askForOperation();
+//        mathOperation.setOperation(scanner.nextLine());
+//
+//        if(mathOperation.getOperation() != null) {
+//            mathOperation.askForNumber(1);
+//            mathOperation.setNumberOne(scanner.nextDouble());
+//
+//            mathOperation.askForNumber(2);
+//            mathOperation.setNumberTwo(scanner.nextDouble());
+//
+//            mathOperation.printResult();
+//        }
 
-        if(mathOperation.getOperation() != null) {
-            mathOperation.askForNumber(1);
-            mathOperation.setNumberOne(scanner.nextDouble());
+        // *********************************************************
 
-            mathOperation.askForNumber(2);
-            mathOperation.setNumberTwo(scanner.nextDouble());
+//        System.out.println("\n\n*********************************************************\n");
 
-            mathOperation.printResult();
-        }
+        // *********************************************************
+        // Investment
+
+        Investment investment = new Investment();
+
+        investment.askForInitialInvestment();
+        investment.setInitialInvestment(scanner.nextDouble());
+
+        investment.askForInterestRate();
+        investment.setInterestRate(scanner.nextDouble());
+
+        investment.askForMonthsInvesting();
+        investment.setMonths(scanner.nextInt());
+
+        investment.printProfitForecast();
     }
 }
