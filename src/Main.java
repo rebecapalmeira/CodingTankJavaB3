@@ -107,10 +107,29 @@ public class Main {
         // *********************************************************
         // Sum of N numbers
 
-        SumOfN sumOfN = new SumOfN();
+//        SumOfN sumOfN = new SumOfN();
+//
+//        sumOfN.askForN();
+//        sumOfN.setN((scanner.nextInt()));
+//        sumOfN.printSum();
 
-        sumOfN.askForN();
-        sumOfN.setN((scanner.nextInt()));
-        sumOfN.printSum();
+        // *********************************************************
+
+//        System.out.println("\n\n*********************************************************\n");
+
+        // *********************************************************
+        // Price
+        PriceTable priceTable = new PriceTable();
+
+        priceTable.askLoanValue();
+        priceTable.setLoan(scanner.nextDouble());
+
+        priceTable.askInterestRate();
+        priceTable.setInterestRate(scanner.nextDouble());
+
+        priceTable.askTimeToPay();
+        priceTable.setTimeToPay(scanner.nextInt());
+
+        priceTable.generatePriceTable();
     }
 }
