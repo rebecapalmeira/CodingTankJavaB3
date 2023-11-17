@@ -119,17 +119,32 @@ public class Main {
 
         // *********************************************************
         // Price
-        PriceTable priceTable = new PriceTable();
 
-        priceTable.askLoanValue();
-        priceTable.setLoan(scanner.nextDouble());
+//        PriceTable priceTable = new PriceTable();
+//
+//        priceTable.askLoanValue();
+//        priceTable.setLoan(scanner.nextDouble());
+//
+//        priceTable.askInterestRate();
+//        priceTable.setInterestRate(scanner.nextDouble());
+//
+//        priceTable.askTimeToPay();
+//        priceTable.setTimeToPay(scanner.nextInt());
+//
+//        priceTable.generatePriceTable();
 
-        priceTable.askInterestRate();
-        priceTable.setInterestRate(scanner.nextDouble());
+        // *********************************************************
 
-        priceTable.askTimeToPay();
-        priceTable.setTimeToPay(scanner.nextInt());
+//        System.out.println("\n\n*********************************************************\n");
 
-        priceTable.generatePriceTable();
+        // *********************************************************
+        // String to Array of Letters
+
+        StringToArray stringToArray = new StringToArray();
+
+        stringToArray.askForWord();
+        stringToArray.setWord(scanner.nextLine());
+
+        stringToArray.printArrayOfLetters();
     }
 }
